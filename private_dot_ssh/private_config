@@ -1,0 +1,121 @@
+
+Host *
+	IdentityFile ~/.ssh/id_rsa
+	KexAlgorithms +diffie-hellman-group1-sha1
+	Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc,aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+	ForwardAgent yes
+	IdentitiesOnly yes
+	MACs hmac-sha2-512
+
+Host cf_pw
+	User yfbnwkxypv
+	HostName s181.cyber-folks.pl
+	Port 222
+	IdentityFile ~/.ssh/keys/cf_pw/key.key
+
+Host gh
+	HostName github.com
+	IdentityFile ~/.ssh/keys/mba15/id_ed25519
+
+Host px
+	User root
+	HostName 192.168.1.23
+
+Host px2
+	User root
+	HostName 192.168.1.24
+
+Host pi
+	User pawel
+	HostName 192.168.1.33
+
+Host n4r
+	User ubuntu
+	HostName 130.162.186.206
+	IdentityFile ~/.ssh/keys/oraclenfr/key.key
+	LocalForward 5901 localhost:5901
+	LocalForward 9090 localhost:9090
+
+Host o2
+	User ubuntu
+	HostName testing.7sun.dev
+	IdentityFile ~/.ssh/keys/oracleTesting/key.key
+	LocalForward 5901 localhost:5901
+	LocalForward 9090 localhost:9090
+	LocalForward 28888 localhost:28888
+	LocalForward 4444 localhost:20000
+
+Host o1
+	User ubuntu
+	HostName dev.7sun.pl
+	IdentityFile ~/.ssh/keys/oracle7sun/key.key
+	LocalForward 5901 localhost:5901
+	LocalForward 9090 localhost:9090
+	LocalForward 28888 localhost:28888
+	LocalForward 4444 localhost:20000
+	MACs hmac-sha2-512
+	HostKeyAlgorithms +ssh-rsa
+	PubkeyAcceptedKeyTypes +ssh-rsa
+
+Host alpha
+	User ubuntu
+	HostName dev.7sun.pl
+	LocalForward 5901 localhost:5901
+	LocalForward 9090 localhost:9090
+	LocalForward 28888 localhost:28888
+	LocalForward 4444 localhost:20000
+	MACs hmac-sha2-512
+	HostKeyAlgorithms +ssh-rsa
+	PubkeyAcceptedKeyTypes +ssh-rsa
+
+
+Host nazwa
+	User server443565
+	HostName server443565.nazwa.pl
+
+Host hitme
+	User pwlazlo
+	HostName 185.242.135.50
+
+Host woo
+	User pawel
+	HostName 192.168.1.145
+
+Host gtk
+	User dayybjswvh
+	HostName s135.cyber-folks.pl
+	Port 222
+
+Host sun
+	User gqduoxxtvr
+	HostName s54.cyber-folks.pl
+	Port 222
+
+Host zlobek
+	User zmbedzy
+	HostName ssh.cluster030.hosting.ovh.net
+
+Host dach
+	User u116051894
+	HostName access1002258069.webspace-data.io
+
+Host n4r.dev
+	User pwlazlo
+	HostName n4r.dev
+	Port 2222
+	LocalForward 30000 localhost:3000
+
+Host godaddy
+	User t9v17jlqio5y
+	HostName 92.205.173.201
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
+
+# --- START CODER JETBRAINS localhost
+Host coder-jetbrains--firstone.main--localhost
+	ProxyCommand "/Users/nerd4rent/Library/Application Support/coder-gateway/localhost-30000/coder-darwin-arm64" --global-config "/Users/nerd4rent/Library/Application Support/coder-gateway/localhost-30000/config" ssh --stdio --disable-autostart firstone.main
+	ConnectTimeout 0
+	StrictHostKeyChecking no
+	UserKnownHostsFile /dev/null
+	LogLevel ERROR
+	SetEnv CODER_SSH_SESSION_TYPE=JetBrains

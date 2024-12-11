@@ -1,0 +1,47 @@
+Host *
+   KexAlgorithms +diffie-hellman-group1-sha1
+   Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc,aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+   ForwardAgent yes
+   IdentitiesOnly yes
+   MACs hmac-sha2-512
+   IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+
+Host px
+	User root
+	HostName 192.168.1.23
+
+Host pi
+	User pawel
+	HostName 192.168.1.33
+
+Host o1
+   User ubuntu
+   HostName 130.61.75.199
+   LocalForward 5901 localhost:5901
+   LocalForward 9090 localhost:9090
+   LocalForward 28888 localhost:28888
+   LocalForward 4444 localhost:20000
+   MACs hmac-sha2-512
+
+Host o2
+	User ubuntu
+	HostName 144.24.166.156
+	LocalForward 5901 localhost:5901
+	LocalForward 9090 localhost:9090
+
+Host n4r
+   User ubuntu
+   HostName 130.162.186.206
+   LocalForward 5901 localhost:5901
+   LocalForward 9090 localhost:9090 
+
+Host gtk
+   HostName s135.cyber-folks.pl
+   User dayybjswvh
+   Port 222
+
+Host zlobek
+   HostName ssh.cluster030.hosting.ovh.net
+   User zmbedzy
+
